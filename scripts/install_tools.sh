@@ -1,12 +1,13 @@
 #!/bin/bash
 #
-# dotfiles setup script
+# install required tools script
 #
 # References:
 #   Homebrew: https://brew.sh/
 #   nvm: https://github.com/nvm-sh/nvm
 #   Zenn CLI: https://zenn.dev/zenn/articles/install-zenn-cli
 #   Go: https://formulae.brew.sh/formula/go
+#   gh: https://formulae.brew.sh/formula/gh
 #   Claude Code: https://formulae.brew.sh/cask/claude-code
 #   Codex: https://formulae.brew.sh/cask/codex
 #   Gemini CLI: https://formulae.brew.sh/formula/gemini-cli
@@ -65,7 +66,16 @@ echo ""
 echo "--- Installing Go ---"
 if command -v brew &> /dev/null; then
     brew install go
-    echo "Go installed"
+else
+    echo "Homebrew not available. Please install Homebrew first."
+fi
+
+# gh (GitHub CLI)
+# https://formulae.brew.sh/formula/gh
+echo ""
+echo "--- Installing gh ---"
+if command -v brew &> /dev/null; then
+    brew install gh
 else
     echo "Homebrew not available. Please install Homebrew first."
 fi
