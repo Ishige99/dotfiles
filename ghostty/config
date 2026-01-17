@@ -1,0 +1,14 @@
+theme = TokyoNight
+
+# 背景透過
+background-opacity = 0.85
+
+# タブで新規ターミナル立ち上げ
+macos-titlebar-style = tabs
+
+# globalでctrlとspace押したらGhostty起動
+keybind = global:ctrl+space=toggle_quick_terminal
+
+# ターミナル分割
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
